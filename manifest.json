@@ -1,0 +1,25 @@
+{
+  "name": "Time Table Manager v2",
+  "short_name": "Timetable",
+  "description": "Manage Class 6th to 10th Time Tables for School",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#1e293b",
+  "orientation": "portrait",
+  "scope": "./",
+  "icons": [
+    {
+      "src": "https://img.icons8.com/ios-filled/192/calendar--v1.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://img.icons8.com/ios-filled/512/calendar--v1.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
