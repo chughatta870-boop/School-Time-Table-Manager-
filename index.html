@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Time Table Manager v2</title>
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#1e293b">
+</head>
+<body>
+<header>
+  <h1>📅 Time Table Manager v2</h1>
+  <button id="installBtn" style="display:none;">Install App</button>
+</header>
+
+<main class="container">
+  <section class="controls">
+    <h2>School Settings</h2>
+    <div class="grid-3">
+      <input id="schoolName" placeholder="School Name">
+      <select id="sessionSelect">
+        <option value="summer">Summer Timing</option>
+        <option value="winter">Winter Timing</option>
+      </select>
+      <select id="classSelect">
+        <option>Class 6th</option><option>Class 7th</option><option>Class 8th</option><option>Class 9th</option><option>Class 10th</option>
+      </select>
+    </div>
+    <div class="grid-3 mt-10">
+      <input id="inchargeName" placeholder="Class Incharge Name">
+      <label>School Start: <input type="time" id="startTime" value="07:30"></label>
+      <label>Period: <input type="number" id="periodMins" value="40" min="30"></label>
+    </div>
+    <div class="grid-2 mt-10">
+      <label>Break: <input type="number" id="breakMins" value="20" min="10"></label>
+      <button id="applyTimingBtn" class="btn-orange">Apply Timing to All Classes</button>
+    </div>
+    <button id="generateBtn">Generate Time Table</button>
+    <button id="saveBtn" class="btn-green">💾 Save This Class</button>
+    <button id="saveAllBtn" class="btn-green">💾 Save All Classes</button>
+    <button id="printBtn" class="btn-blue">🖨️ Print This Class</button>
+    <button id="printAllBtn" class="btn-blue">🖨️ Print All Classes</button>
+  </section>
+
+  <section id="timetableArea" class="hidden">
+    <div class="top-info">
+      <h2 id="printTitle"></h2>
+    </div>
+    <table id="timetableTable">
+      <thead>
+        <tr>
+          <th>Day / Period</th>
+          <th id="p1">1</th><th id="p2">2</th><th id="p3">3</th>
+          <th id="p4">4</th><th id="p5">5</th><th id="p6">6</th>
+          <th class="break-col">Break</th>
+          <th id="p7">7</th><th id="p8">8</th>
+        </tr>
+      </thead>
+      <tbody id="timetableBody"></tbody>
+    </table>
+  </section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
